@@ -3,7 +3,7 @@ const express = require('express'),
 	secure = require('ssl-express-www');
 const app = express();
 const bodyParser = require("body-parser");
-const PORT = 3000;
+const PORT = process.env.PORT || 8080 || 5000 || 3000
 
 const mainrouter = require("./routes/mainrouter.js"),
 	apirouter = require("./routes/api.js");
